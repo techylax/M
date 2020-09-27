@@ -1,0 +1,188 @@
+#Config file for declaring custom actions'parameters. The parameters have been listed here in alphabetical order (A-Z).
+
+#Custom conversation. Add your queries and expected assistant response. Do not add symbols or special charecters.
+Conversation:
+  question:
+    1:
+      - 'Who are you'
+    2:
+      - 'Do you have a family'
+  answer:
+    1:
+      - 'I am not the one you expect to be'
+      - 'Who do you think I am'
+      - 'What bothers you'
+    2:
+      - 'Nope i am forever alone'
+      - 'The whole world is my family'
+
+# Deezer user credentials
+Deezer:
+  User_id: '2247762504'
+
+# Domoticz declarations
+Domoticz:
+  # Set this to 'Enabled' to control devices registered to Domoticz server.
+  Domoticz_Control: 'Disabled'
+  Server_IP:
+    # If you are running the server on the Pi itself, then change the ip to 'localhost'
+    - '192.168.0.10'
+  Server_port:
+    - '443'
+  Devices:
+    #The number of names and number of ids should be equal
+    #List the device names that you want to control
+    Name:
+      - 'Lamp1'
+      - 'Lamp2'
+      - 'Lamp3'
+    #Assign the device ids in the same order as the devices listed above
+    Id:
+      - '1'
+      - '2'
+      - '3'
+
+#ESP control declarations. Follow a similar pattern to add your own list.
+ESP:
+  IP: 'xxxxxxxxxxxx' #Enter your ESP's IP here.
+  devicename:
+    - 'Device 1'
+    - 'Device 2'
+    - 'Device 3'
+  deviceid:
+    - '/Device1'
+    - '/Device2'
+    - '/Device3'
+
+#Streaming songs from Gaana.com
+Gaana:
+  Playlist:
+    # Enter your desired playlists
+    - 'https://gaana.com/playlist/gaana-dj-bollywood-top-50-1'
+    - 'https://gaana.com/playlist/alka-yagnik-bday'
+
+#Enter your Google Login Credentials
+Gmusicapi:
+  #If you are using two-step authentication, use app specific password. For guidelines, go through README
+  email: 'ENTER_YOUR_EMAIL_HERE'
+  password: 'ENETER_YOUR_PASSWORD'
+  deviceid: Mobileclient.FROM_MAC_ADDRESS
+
+#API Key for YouTube and Kickstarter Search Engine
+Google_cloud_api_key: ENTER-YOUR-GOOGLE-CLOUD-API-KEY-HERE
+
+#GPIOS used in the project. Feel free to change in case.
+Gpios:
+  AIY_indicator:
+    - 25
+  assistant_indicators:
+    - 05
+    - 06
+  picontrol:
+    - 12
+    - 13
+    - 24
+  pushbutton_trigger:
+    - 22
+  servo:
+    - 27
+  stopbutton_music_AIY_pushbutton:
+    - 23
+
+#KODI custom declarations change IP, music directory and video directory according to your device
+Kodi:
+  control: 'Disabled'
+  ip: 192.168.88.226
+  port: 8080
+  username: kodi
+  password: kodi
+  musicdirectory: '/home/osmc/Music/'
+  videodirectory: '/home/osmc/Movies/'
+  windowcmd:
+    - Home
+    - Settings
+    - Weather
+    - Videos
+    - Music
+    - Player
+  window:
+    - home
+    - settings
+    - weather
+    - videos
+    - music
+    - playercontrols
+
+#Change you language. Default is english
+Language:
+  Choice: 'en'
+  Language options:
+     - 'en' #'English'
+     - 'fr' # 'French'
+     - 'de' # 'German'
+     - 'it' # 'Italian'
+     - 'es' # 'Spanish'
+     - 'nl' # 'Dutch'
+     - 'sv' # 'Swedish'
+
+# Enter your Magic Mirror IP
+Mmmip: 'ENTER_YOUR_MAGIC_MIRROR_IP'
+
+#Radio station declarations. Follow a similar pattern to add your own stations.
+#Google may not pickup the pronunciation of radio station names, hence 'Radio 1' etc is required.
+Radio_stations:
+  stationnames:
+    - 'Radio 1'
+    - 'Radio 2'
+    - 'Radio 3'
+    - 'Radio 4'
+    - 'Radio 5'
+    - 'Radio 6'
+  stationlinks:
+    - 'http://stream.100p.nl/100pctnl.mp3'
+    - 'http://stream.radiocorp.nl/100pnl_feest_mp3'
+    - 'http://playerservices.streamtheworld.com/api/livestream-redirect/SKYRADIO.mp3'
+    - 'https://stream.slam.nl/slam_mp3'
+    - 'http://icecast.omroep.nl/3fm-bb-mp3'
+    - 'http://playerservices.streamtheworld.com/api/livestream-redirect/VERONICA.mp3'
+  stationradio:
+    - '100% NL'
+    - '100% NL Party'
+    - 'Skyradio'
+    - 'Slam FM'
+    - '3 FM'
+    - 'Veronica'
+
+#Pi GPIO control declarations. Follow a similar pattern to add your own list of GPIOs
+Raspberrypi_GPIO_Control:
+  lightnames:
+    - 'kitchen lights'
+    - 'bathroom lights'
+    - 'bedroom lights'
+
+#Spotify credentials. Register for a spotify developer and get the credentials.
+Spotify:
+  client_id: 'ENTER YOUR SPOTIFY CLIENT ID HERE'
+  client_secret: 'ENTER YOUR SPOTIFY CLIENT SECRET HERE'
+  username: 'ENTER YOUR SPOTIFY USERNAME HERE'
+
+#Enter your Tasmota Device details below
+Tasmota_devicelist:
+  friendly-names:
+    - 'Desk Light'
+    - 'Table Light'
+  ipaddresses:
+    - '192.168.1.36'
+    - '192.168.1.35'
+  portID:
+    - '1'
+    - '1'
+
+#Custom wakeword On/Off.
+#To enable custom wakeword, change status to Enabled and restart the assistant.
+Wakewords:
+  Ok_Google: 'Enabled'
+  Custom_Wakeword: 'Enabled'
+  Custom_wakeword_models:
+    - '/home/pi/GassistPi/src/resources/alexa.umdl'
+    - '/home/pi/GassistPi/src/resources/snowboy.umdl'

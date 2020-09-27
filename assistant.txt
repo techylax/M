@@ -1,0 +1,28 @@
+googlesamples-assistant-pushtotalk --project-id robo-224808 --device-model-id robo-224808-robonepal-j3jxos
+
+
+googlesamples-assistant-hotword --project-id robo-224808 --device-model-id robo-224808-robonepal-j3jxos
+
+
+google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype \
+      --scope https://www.googleapis.com/auth/gcm \
+      --save --headless --client-secrets /home/pi/client_secret_403988622436-qot0shibtnsmhcugd3dj4kv7pvg843cj.apps.googleusercontent.com.json
+
+googlesamples-assistant-hotword --device-model-id my-model robo-224808-robonepal-j3jxos
+
+
+LED TURNING
+ googlesamples-assistant-hotword --device-model-id robo-224808-robonepal-j3jxos
+googlesamples-assistant-hotword --device-model-id robo-224808-robonepal-j3jxos
+
+
+print('Do command', command, 'with params', str(params)) 
+if command == "action.devices.commands.OnOff":
+    if params['on']:
+        print('Turning the LED on.')
+    else:
+        print('Turning the LED off.')
+
+
+python hotword.py --device-model-id robo-224808-robonepal-j3jxos
+/home/pi/env/bin/python -u /home/pi/GassistPi/src/main.py --device_model_id robo-224808-robonepal-j3jxos
