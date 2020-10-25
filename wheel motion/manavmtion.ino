@@ -20,7 +20,30 @@ void setup()
   Serial.begin(9600);
 }
 
+void loop()
+{
+  
+  while(Serial.available() == 0);
+  char val = Serial.read() ;
+  Serial.print(val);
 
+ 
+  
+  if (val == 'F')
+  {
+    Serial.println("FORWARD");
+    digitalWrite(lm1,HIGH);  digitalWrite(rm1,HIGH);
+    digitalWrite(lm2,LOW);       digitalWrite(rm2,LOW);
+    
+  }
+
+ 
+    
+  else if(val == 'B')
+  {
+  Serial.println("BACK");
+      digitalWrite(lm2,HIGH);  digitalWrite(rm2,HIGH);
+    digitalWrite(lm1,LOW);       digitalWrite(rm1,LOW);
   
   }
    
